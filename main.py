@@ -12,14 +12,16 @@ def main():
     space_ship = Player(x,y)
     screen = pygame.display.set_mode((SCREEN_WIDTH,SCREEN_HEIGHT))
     game_time = pygame.time.Clock()
-    dt = 0
+    dt = 0.0
     while conti:
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 return
         screen.fill("black")
         space_ship.draw(screen)
+        space_ship.update(dt)
         pygame.display.flip()
-        dt = game_time.tick(60)/1000
+        dt = (game_time.tick(60))/1000
+        print(dt)
 if __name__ == "__main__":
     main()
