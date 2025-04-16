@@ -22,6 +22,6 @@ def main():
         space_ship.update(dt)
         pygame.display.flip()
         dt = (game_time.tick(60))/1000
-        print(dt)
+
 if __name__ == "__main__":
     main()
