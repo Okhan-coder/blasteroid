@@ -43,7 +43,7 @@ def main():
               exit()
             for shot in shots:
                 if not shot.collide(obj):
-                    obj.kill()
+                    obj.split()
                     shot.kill()
             
         pygame.display.flip()
