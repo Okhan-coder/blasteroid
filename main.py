@@ -41,6 +41,10 @@ def main():
             if not conti:
               print("GAME OVER")
               exit()
+            for shot in shots:
+                if not shot.collide(obj):
+                    obj.kill()
+                    shot.kill()
             
         pygame.display.flip()
         dt = (game_time.tick(60))/1000
