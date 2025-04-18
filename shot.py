@@ -11,4 +11,9 @@ class Shot(CircleShape):
         self.position += self.velocity * dt
 
 
-
+    def collision(self,circle):
+        distance = self.position.distance_to(circle.position)
+        r_distance = self.radius + circle.radius
+        if distance < r_distance:
+            return True
+        return False 
